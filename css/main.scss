@@ -1,0 +1,132 @@
+#header {
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 40px 60px;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+
+    .left-section {
+      display: flex;
+
+      li {
+        margin-right: 20px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+    .top-logo {
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+#right_nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  z-index: 100;
+
+  ul {
+    li {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 50px;
+      a {
+        font-size: 24px;
+        opacity: 0.6;
+      }
+      &::after {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 2px;
+        background-color: #fff;
+        opacity: 0.6;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &.active_now {
+        a {
+          opacity: 1;
+        }
+
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+#fullpage {
+  .intro {
+    background-image: url(../img/intro_bg.png);
+    background-size: cover;
+    position: relative;
+
+    .center_text {
+      position: absolute;
+      top: calc(50% - 15px);
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 36px;
+      animation: fadeIn 2s;
+
+      h1 {
+        font-size: 94px;
+        font-weight: 500;
+      }
+      .line {
+        width: 2px;
+        height: 20px;
+        background-color: #fff;
+      }
+      p {
+        font-size: 32px;
+      }
+    }
+  }
+
+  .east_course {
+    background-image: url(../img/east_course.png);
+    background-size: cover;
+  }
+
+  .south_course {
+    background-image: url(../img/south_course.png);
+    background-size: cover;
+  }
+
+  .west_course {
+    background-image: url(../img/west_course.png);
+    background-size: cover;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
