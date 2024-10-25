@@ -59,6 +59,7 @@ body * {
   color: #fff;
   font-weight: 400;
   letter-spacing: -0.025em;
+  line-height: 1;
 }
 
 /* 기타 기본 스타일 초기화 */

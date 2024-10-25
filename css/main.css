@@ -11,20 +11,29 @@
   display: flex;
   justify-content: space-between;
 }
-#header nav .left-section {
+#header nav .left_section {
   display: flex;
 }
-#header nav .left-section li {
+#header nav .left_section li {
   margin-right: 20px;
 }
-#header nav .left-section li:last-child {
+#header nav .left_section li:last-child {
   margin-right: 0;
 }
-#header nav .top-logo {
+#header nav .top_logo {
   position: absolute;
   top: 40px;
   left: 50%;
   transform: translateX(-50%);
+}
+#header.white_bg nav .left_section li a {
+  color: #222;
+}
+#header.white_bg nav .top_logo img {
+  content: url(../img/logo_green.svg);
+}
+#header.white_bg nav .hamburger_btn img {
+  content: url(../img/hamburger_green.svg);
 }
 
 #right_nav {
@@ -62,6 +71,28 @@
 #right_nav ul li.active_now::after {
   opacity: 1;
 }
+#right_nav.white_bg ul li a {
+  color: #666;
+  opacity: 1;
+}
+#right_nav.white_bg ul li::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: #666;
+}
+#right_nav.white_bg ul li.active_now a {
+  color: #006736;
+  opacity: 1;
+}
+#right_nav.white_bg ul li.active_now::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: #006736;
+}
 
 #fullpage .intro {
   background-image: url(../img/intro_bg.png);
@@ -70,14 +101,13 @@
 }
 #fullpage .intro .center_text {
   position: absolute;
-  top: calc(50% - 15px);
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 36px;
-  animation: fadeIn 2s;
 }
 #fullpage .intro .center_text h1 {
   font-size: 94px;
@@ -102,6 +132,57 @@
 #fullpage .west_course {
   background-image: url(../img/west_course.png);
   background-size: cover;
+}
+#fullpage .common_center_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 100px;
+}
+#fullpage .common_center_text .left_section {
+  max-width: 740px;
+}
+#fullpage .common_center_text .left_section h2 {
+  font-size: 94px;
+  font-weight: 500;
+  margin-bottom: 70px;
+}
+#fullpage .common_center_text .left_section .texts h3 {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+#fullpage .common_center_text .left_section .texts p {
+  line-height: 32px;
+  font-size: 22px;
+}
+#fullpage .common_center_text .right_section {
+  display: flex;
+  align-items: flex-end;
+}
+#fullpage .common_center_text .right_section .view {
+  position: relative;
+}
+#fullpage .common_center_text .right_section .view span {
+  font-size: 70px;
+}
+#fullpage .common_center_text .right_section .view .arrow_right {
+  width: 142px;
+  height: 24px;
+  background-image: url(../img/arrow_right.png);
+  background-size: 100% 100%;
+  position: absolute;
+  bottom: -14px;
+  right: -27px;
+  transition: all 0.3s;
+}
+#fullpage .common_center_text .right_section .view:hover .arrow_right {
+  transform: translateX(15px);
+}
+#fullpage .animation_text.active_now {
+  animation: fadeIn 1.5s;
 }
 
 @keyframes fadeIn {
