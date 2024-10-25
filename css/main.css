@@ -133,6 +133,16 @@
   background-image: url(../img/west_course.png);
   background-size: cover;
 }
+#fullpage .family_site .links {
+  padding-left: 60px;
+  padding-right: 252px;
+}
+#fullpage .family_site .links .texts h2 {
+  color: #222;
+}
+#fullpage .family_site .links .texts p {
+  color: #222;
+}
 #fullpage .common_center_text {
   position: absolute;
   top: 50%;

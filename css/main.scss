@@ -170,6 +170,20 @@
     background-image: url(../img/west_course.png);
     background-size: cover;
   }
+  .family_site {
+    .links {
+      padding-left: 60px;
+      padding-right: 252px;
+      .texts {
+        h2 {
+          color: #222;
+        }
+        p {
+          color: #222;
+        }
+      }
+    }
+  }
   .common_center_text {
     position: absolute;
     top: 50%;

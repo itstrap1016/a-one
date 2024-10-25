@@ -60,6 +60,7 @@ body * {
   font-weight: 400;
   letter-spacing: -0.025em;
   line-height: 1;
+  box-sizing: border-box;
 }
 
 /* 기타 기본 스타일 초기화 */
