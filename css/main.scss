@@ -239,6 +239,7 @@
         }
       }
       .tab_time_table {
+        width: 434px;
         .tab {
           display: flex;
           background-color: #d7f1ce;
@@ -274,10 +275,13 @@
           &::-webkit-scrollbar-track {
             background: #ededed; /* 스크롤바 트랙 색상 */
           }
-
           table {
             width: 100%;
             thead {
+              position: sticky;
+              top: 0;
+              background-color: white;
+              border-bottom: 1px solid #ddd;
               tr {
                 border-bottom: 1px solid #ddd;
                 th {

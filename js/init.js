@@ -104,12 +104,30 @@ const popupInit = () => {
     myFullpage.setAllowScrolling(true);
   });
 };
+const popupTabInit = () => {
+  const btns = document.querySelectorAll(
+    "#pc_pop_up .window .content .tab_time_table .tab li button"
+  );
+
+  btns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      if (!btn.classList.contains("active_now")) {
+        const activeBtn = document.querySelector(
+          "#pc_pop_up .window .content .tab_time_table .tab li button.active_now"
+        );
+        activeBtn.classList.remove("active_now");
+        btn.classList.add("active_now");
+      }
+    });
+  });
+};
 const initialInit = () => {
   rightNavInit();
   aniTextInit();
   leftNavInit();
   calendarInit();
   popupInit();
+  popupTabInit();
 };
 
 initialInit();

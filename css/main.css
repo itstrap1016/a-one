@@ -203,6 +203,9 @@
   background-color: #2fb400;
   border-color: #2fb400;
 }
+#pc_pop_up .window .content .tab_time_table {
+  width: 434px;
+}
 #pc_pop_up .window .content .tab_time_table .tab {
   display: flex;
   background-color: #d7f1ce;
@@ -236,6 +239,12 @@
 }
 #pc_pop_up .window .content .tab_time_table .time_table table {
   width: 100%;
+}
+#pc_pop_up .window .content .tab_time_table .time_table table thead {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
 }
 #pc_pop_up .window .content .tab_time_table .time_table table thead tr {
   border-bottom: 1px solid #ddd;
