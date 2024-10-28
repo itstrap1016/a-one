@@ -77,11 +77,18 @@ const leftNavInit = () => {
     leftNav.classList.toggle("clicked");
   });
 };
+const calendarInit = () => {
+  flatpickr("#datepicker", {
+    inline: true,
+    locale: "ko",
+  });
+};
 
 const initialInit = () => {
   rightNavInit();
   aniTextInit();
   leftNavInit();
+  calendarInit();
 };
 
 initialInit();

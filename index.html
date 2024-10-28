@@ -17,6 +17,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.30/fullpage.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/monthSelect/index.css"
+    />
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
@@ -98,6 +106,23 @@
         </li>
       </ul>
     </nav>
+    <div id="pc_pop_up">
+      <div class="bg"></div>
+      <div class="window">
+        <div class="header">
+          <h2>예약하기</h2>
+          <button type="button">
+            <img src="./img/pop_up_close.png" alt="close img" />
+          </button>
+        </div>
+        <div class="content">
+          <div class="calendar">
+            <input type="text" id="datepicker" placeholder="날짜 선택" />
+          </div>
+          <div class="tab-time-table"></div>
+        </div>
+      </div>
+    </div>
     <div id="fullpage">
       <div class="section intro">
         <div class="center_text animation_text">
@@ -226,6 +251,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/monthSelect/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ko.js"></script>
     <script src="./js/init.js"></script>
   </body>
 </html>

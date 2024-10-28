@@ -146,6 +146,97 @@
   }
 }
 
+#pc_pop_up {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 200;
+
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+  }
+
+  .window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    max-width: 900px;
+
+    .header {
+      background-color: #009850;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 24px;
+
+      h2 {
+        font-size: 24px;
+        font-weight: 500;
+      }
+    }
+    .content {
+      padding: 20px 24px;
+      display: flex;
+      gap: 40px;
+      .calendar {
+        #datepicker {
+          display: none;
+        }
+
+        .flatpickr-calendar {
+          color: #222;
+          box-shadow: none;
+
+          .flatpickr-months {
+            margin-bottom: 20px;
+            align-items: center;
+            .flatpickr-current-month {
+              padding-top: 4px;
+              .flatpickr-monthDropdown-months {
+                font-size: 20px;
+                font-weight: 500;
+                color: #222;
+              }
+              .numInputWrapper {
+                width: 70px;
+              }
+              .cur-year {
+                font-size: 20px;
+                font-weight: 500;
+                color: #222;
+              }
+            }
+          }
+          .flatpickr-weekdays {
+            margin-bottom: 10px;
+          }
+          .flatpickr-weekday {
+            color: #222;
+            font-weight: 500;
+            font-size: 16px;
+          }
+          .flatpickr-day {
+            font-size: 16px;
+            &.selected {
+              font-weight: 500;
+              background-color: #2fb400;
+              border-color: #2fb400;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 #right_nav {
   position: fixed;
   top: 50%;
