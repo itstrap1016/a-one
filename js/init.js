@@ -68,6 +68,20 @@ const familySiteInit = () => {
   header.classList.add("white_bg");
   rightNav.classList.add("white_bg");
 };
+const leftNavInit = () => {
+  const btn = document.querySelector("#left_nav .arrow_button");
+  const leftNav = document.querySelector("#left_nav");
 
-rightNavInit();
-aniTextInit();
+  btn.addEventListener("click", () => {
+    btn.classList.toggle("clicked");
+    leftNav.classList.toggle("clicked");
+  });
+};
+
+const initialInit = () => {
+  rightNavInit();
+  aniTextInit();
+  leftNavInit();
+};
+
+initialInit();
