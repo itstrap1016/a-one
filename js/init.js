@@ -83,12 +83,33 @@ const calendarInit = () => {
     locale: "ko",
   });
 };
+const popupInit = () => {
+  const reservBtn = document.querySelector("#left_nav .menu .reserv button");
+  const popupBg = document.querySelector("#pc_pop_up .bg");
+  const closeBtn = document.querySelector(
+    "#pc_pop_up .window > .header > button"
+  );
+  const popup = document.querySelector("#pc_pop_up");
 
+  reservBtn.addEventListener("click", () => {
+    popup.classList.add("active_now");
+    myFullpage.setAllowScrolling(false);
+  });
+  popupBg.addEventListener("click", () => {
+    popup.classList.remove("active_now");
+    myFullpage.setAllowScrolling(true);
+  });
+  closeBtn.addEventListener("click", () => {
+    popup.classList.remove("active_now");
+    myFullpage.setAllowScrolling(true);
+  });
+};
 const initialInit = () => {
   rightNavInit();
   aniTextInit();
   leftNavInit();
   calendarInit();
+  popupInit();
 };
 
 initialInit();
