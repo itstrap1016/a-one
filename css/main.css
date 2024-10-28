@@ -108,6 +108,9 @@
   gap: 2px;
   margin-bottom: 12px;
 }
+#left_nav .menu > li.weather ul li:last-child {
+  margin-bottom: 0;
+}
 #left_nav .menu > li.weather ul li .day {
   font-size: 12px;
   color: #666;

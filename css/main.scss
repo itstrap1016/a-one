@@ -131,6 +131,10 @@
             gap: 2px;
             margin-bottom: 12px;
 
+            &:last-child {
+              margin-bottom: 0;
+            }
+
             .day {
               font-size: 12px;
               color: #666;
